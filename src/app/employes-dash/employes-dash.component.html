@@ -1,0 +1,135 @@
+<nav class="navbar navbar-light bg-success">
+    <div class="container-fluid">
+        <h1 style="color: rgb(255, 255, 255); font-size: 20px">Gestion Employes</h1>
+        <div>
+
+          <button routerLink="/listing-component" type="button" class="btn btn-primary">
+            CRUD
+        </button>
+
+        </div>
+        <div class="d-flex">
+            <button (click)="clickAddEmployes()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Employes
+            </button>
+
+            <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+
+            <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employes Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <form [formGroup] = "formValue">
+   
+                <div class="mb-3">
+                  <label class="form-label">Num</label>
+                  <input type="number" class="form-control" formControlName= "num">
+                </div>
+                  
+                <div class="mb-3">
+                  <label class="form-label">Firstname</label>
+                  <input type="text" class="form-control" formControlName = "firstname">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Lastname</label>
+                    <input type="text" class="form-control" formControlName = "lastname">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" formControlName = "email">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Age</label>
+                    <input type="text" class="form-control" formControlName = "age">
+                  </div>
+
+
+                  <div class="mb-3">
+                    <label class="form-label">ProfilImage</label>
+                    <input type="text" class="form-control" formControlName = "profilImage">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Validated</label>
+                    <input type="text" class="form-control" formControlName = "validated">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">MaretialAssigned</label>
+                    <input type="text" class="form-control" formControlName = "materialAssigned">
+                  </div>  
+
+              </form>
+
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancel">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postEmployesDetails()" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateEmployeDetails()" class="btn btn-warning">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Num</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Validated</th>
+            <th scope="col">Email</th>
+            <th scope="col">ProfilImage</th>
+            <th scope="col">MaterialAssigned</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let emp of employesData">
+             
+            <td>{{emp.id}}</td>
+            <td>{{emp.num}}</td>
+            <td>{{emp.firstname}}</td>
+            <td>{{emp.lastname}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.validated}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.profilImage}}</td>
+            <td>{{emp.materialAssigned }}</td>
+           
+
+
+            <span>
+
+                  <td>
+                    <button (click)="editEmployes(emp)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                    <button (click)="deleteEmployes(emp)" class="btn btn-danger">Delete</button>
+                </td>
+
+            </span>   
+
+        </tr>
+       
+    </tbody>
+</table>
+
+
+  
+  

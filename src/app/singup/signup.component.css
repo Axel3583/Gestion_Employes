@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  box-shadow: 10px 10px 8px #888888;
+  align-items: center;
+  left: 35%;
+  margin-top: 2%;
+  border-radius: 25px;
+  background: #000000;;
+  padding: 20px;
+  width: 350px;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  
+
+ 
+
+  .axel{
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 2%;
+    border-radius: 25px;
+    background: #000000;;
+    padding: 20px;
+    width: 350px;
+    height: 475px; 
+    left: 45%;
+  }
+  
+  .card h1, 
+  h6, h5 {
+    color:#fffbfb;
+  }
+  
+  label {
+      color: #fff;
+  }
+
+
+  .kol-1 {
+     position: relative;
+     left: 35%;
+  }

@@ -1,0 +1,29 @@
+.card {
+  font-size: 10px;
+  position: relative;
+ 
+  width: 500px;
+  margin-top: 5%;
+  left: 55%;
+}
+
+.axel{
+  box-shadow: 10px 10px 8px #888888;
+  position: relative; 
+  left: 64%;
+  margin-top: 2%;
+  border-radius: 25px;
+  background: #000000;
+  padding: 20px;
+  width: 400px;
+ 
+}
+
+.card h1, 
+h6 {
+  color:#000000;
+}
+
+label {
+    color: #fff;
+}

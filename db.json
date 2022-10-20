@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "num": 1,
+      "firstname": "Axel",
+      "lastname": "VARLET",
+      "age": "25",
+      "email": "renee.varlet21@gmail.com",
+      "validated": "Yes",
+      "materialAssigned": "Pc"
+    },
+    {
+      "id": 2,
+      "num": 2,
+      "firstname": "ALOUSIA",
+      "lastname": "VARLET",
+      "age": "20",
+      "email": "a1@gmail.com",
+      "validated": "Ok",
+      "materialAssigned": "Mac"
+    }
+  ],
+  "comments": [
+    {
+      "fullname": "",
+      "email": "axelyvesi2@gmail.com",
+      "password": "",
+      "mobile": "",
+      "id": 2
+    },
+    {
+      "fullname": "",
+      "email": "axelyvesi2@gmail.com",
+      "password": "",
+      "mobile": "",
+      "id": 3
+    },
+    {
+      "fullname": "ALOUSIA VARLET",
+      "email": "renee.varlet21@gmail.com",
+      "password": "123456",
+      "mobile": 141414,
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
